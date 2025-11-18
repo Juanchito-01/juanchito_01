@@ -1,0 +1,256 @@
+/* ==========================================================================
+   ESTILOS GENERALES
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #1e3a8a, #0f766e);
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Contenedor principal para centrar la app y hacerla responsiva */
+.app-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Tarjetas (login y app) */
+.card {
+    background-color: #f9fafb;
+    border-radius: 1rem;
+    padding: 1.75rem 1.5rem 1.5rem;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+}
+
+/* Ocultar elementos con utilidad .hidden */
+.hidden {
+    display: none;
+}
+
+/* Títulos y textos */
+.app-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.section-title {
+    margin-top: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin-top: 0.25rem;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    margin: 0.75rem 0 1rem;
+}
+
+.description.small {
+    font-size: 0.85rem;
+}
+
+/* Formularios */
+.form {
+    margin-top: 0.75rem;
+}
+
+.form-group {
+    margin-bottom: 0.9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: #374151;
+}
+
+.form-group input {
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.2s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9);
+    color: #f9fafb;
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.45);
+}
+
+.btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 24px rgba(37, 99, 235, 0.55);
+}
+
+.btn.primary:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 12px rgba(30, 64, 175, 0.65);
+}
+
+.btn.secondary {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+.btn.secondary:hover {
+    background-color: #d1d5db;
+}
+
+.btn.large {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Mensajes de información, error, éxito */
+.message {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.75rem;
+}
+
+.message.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.message.success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* Cajitas de ayuda y datos */
+.help-box,
+.info-box {
+    margin-top: 1rem;
+    padding: 0.75rem 0.9rem;
+    border-radius: 0.75rem;
+    background-color: #e0f2fe;
+    font-size: 0.85rem;
+    color: #1e40af;
+}
+
+.help-box ul {
+    margin-top: 0.35rem;
+    padding-left: 1.1rem;
+}
+
+.help-box li {
+    margin-bottom: 0.15rem;
+}
+
+/* Encabezado de la app (vista autenticada) */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Estado actual del usuario */
+.status {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.status p {
+    margin-bottom: 0.25rem;
+}
+
+/* Historial de usos */
+.usage-history {
+    margin-top: 1.25rem;
+}
+
+.usage-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.usage-list li {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #e5e7eb;
+    margin-bottom: 0.4rem;
+}
+
+/* Footer */
+.app-footer {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD
+   ========================================================================== */
+
+@media (min-width: 640px) {
+    body {
+        padding: 2.5rem;
+    }
+
+    .card {
+        padding: 2rem 2.25rem 1.75rem;
+    }
+
+    .app-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
